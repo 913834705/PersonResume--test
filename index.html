@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!--==================== UNICONS 图标====================-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>响应式个人简历</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="nav-items">
+                <span class="nav-item active" data-target="about">关于我</span>
+                <span class="nav-item" data-target="skills">技能</span>
+                <span class="nav-item" data-target="education">教育</span>
+                <span class="nav-item" data-target="projects">项目</span>
+                <span class="nav-item" data-target="contact">联系</span>
+                <button id="theme-toggle" aria-label="切换主题">
+                    <i class="icon" id="theme-icon">&#127774;</i> <!-- 初始为太阳图标 -->
+                </button>
+            </div>
+        </div>
+        <div class="header2">
+            <div class="nav-items dropdown">
+                <button class="dropdown-btn" id="dropdownBtn">
+                    <img class="fenlei" src="./assets/分类.svg" alt="">
+                </button>
+                 <div class="dropdown-content" id="dropdownContent">
+                    <a href="#" class="dropdown-link active nav-item" data-target="about">
+                        <i class="fas fa-user"></i> 关于我
+                    </a>
+                    <a href="#" class="dropdown-link nav-item" data-target="skills">
+                        <i class="fas fa-code"></i> 技能
+                    </a>
+                    <a href="#" class="dropdown-link nav-item" data-target="education">
+                        <i class="fas fa-graduation-cap"></i> 教育
+                    </a>
+                    <a href="#" class="dropdown-link nav-item" data-target="projects">
+                        <i class="fas fa-project-diagram"></i> 项目
+                    </a>
+                    <a href="#" class="dropdown-link nav-item" data-target="contact">
+                        <i class="fas fa-envelope"></i> 联系
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="info navTo" id="about">
+        <div class="man">
+            <img src="./assets/man.svg" alt="" >
+        </div>
+        <div class="header-text">
+            <h1 id="name" style="font-size:40px;margin:10px 0">zhangsan</h1>
+            <div class="title">
+                <p id="info_header">xxxx</p>
+            </div id="info_introduction">
+            <p id="info_introduction">xxxxxxxxxx</p>
+        </div>
+    </div>
+
+    <div class="main">
+        <aside>
+            <div class="aside navTo" id="skills">
+                <h2 style="display: block;">专业技能</h2>
+                <div>
+                    <img src="./assets/HTML.svg" alt="">
+                    <p>HTML5</p>
+                </div>
+                <div>
+                    <img src="./assets/css.svg" alt="">
+                    <p>CSS3</p>
+                </div>
+                <div>
+                    <img src="./assets/JavaScript.svg" alt="">
+                    <p>JavaScript</p>
+                </div>
+                <div>
+                    <img src="./assets/Vue.js_Logo.svg" alt="">
+                    <p>Vue.js</p>
+                </div>
+                <div>
+                    <img src="./assets/git.svg" alt="">
+                    <p>Git</p>
+                </div>
+            </div>
+        </aside>
+        <main>
+            <section class="section1 navTo" id="education">
+                <h2>教育经历</h2>
+                <h4 style="white-space: pre;" id="main_education">本科 CET4 软件工程专业</h4>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <p>2020.9-2022.6</p>
+                        <h3 id="main_school1">
+                            西安交通大学
+                        </h3>
+                        <span id="main_lesson1">主修课程：数据结构、Web前端开发技术等</span>
+                    </div>
+                    <div class="timeline-item">
+                        <p>2022.6-2024.6</p>
+                        <h3 id="main_school2">
+                            厦门工学院
+                        </h3>
+                        <span id="main_lesson2">主修课程：计算机组成原理、计算机网络、操作系统等</span>
+                    </div>
+                </div>
+            </section>
+            <section class="section2 navTo" id="projects">
+                <h1>项目展示</h1>
+                <div class="project-filters" id="projectsFilter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="vue">vue.js</button>
+                    <button class="filter-btn" data-filter="uniapp">uni App</button>
+                </div>
+                <div class="projects-grid" id="projectsGrid">
+                    <div class="project-card" data-tags="vue">
+                        <div class="project-image">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3 id="project_name1">电商后台系统</h3>
+                            <p id="project_introduction1">使用React和Redux构建的企业级ERP解决方案，包含库存管理、订单跟踪等功能。</p>
+                            <div class="project-tags">
+                                <span class="project-tag">vue.js</span>
+                                <span class="project-tag">vue router</span>
+                                <span class="project-tag">Ant Design</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-tags="vue">
+                        <div class="project-image">
+                            <i class="fab fa-vuejs"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3 id="project_name2">购物平台系统</h3>
+                            <p id="project_introduction2">基于Vue.js和Vuex的电商后台管理系统，支持商品管理、订单处理和用户数据分析。</p>
+                            <div class="project-tags">
+                                <span class="project-tag">Vue.js</span>
+                                <span class="project-tag">Vuex</span>
+                                <span class="project-tag">Element UI</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-tags="uniapp">
+                        <div class="project-image">
+                            <i class="fab fa-vuejs"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3 id="project_name3">微信小程序</h3>
+                            <p id="project_introduction3">基于Vue.js和Vuex的电商后台管理系统，支持商品管理、订单处理和用户数据分析。</p>
+                            <div class="project-tags">
+                                <span class="project-tag">Vue.js</span>
+                                <span class="project-tag">Vuex</span>
+                                <span class="project-tag">Element UI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </main>
+    </div>
+    <footer class="container navTo" id="contact">
+        <h2 class="footer-title" style="margin:0;font-size: 50px;">联系方式</h2>
+        <div class="footer-subtitle" style="color: rgb(118, 97, 97);font-size: 30px;"><span>get in touch</span></div>
+        <div>
+            <div class="contact-container">
+                <div class="contact-information">
+                    <i class="uil uil-phone-alt contact__icon"></i>
+                    <div class="container">
+                        <h3 class="contact__title" i18n="tel">电话</h3>
+                        <span class="contact__subtitle" i18n="tel__number" id="telephone">166********</span>
+                    </div>
+                </div>
+                <div class="contact-information">
+                    <i class="uil uil-envelope contact__icon"></i>
+                    <div>
+                        <h3 class="contact__title" i18n="email">邮箱</h3>
+                        <span class="contatc__subtitle" i18n="email__address" id="email">913834705@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./dist/main.js"></script>
+</body>
+
+
+</html>

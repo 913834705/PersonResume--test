@@ -1,0 +1,23 @@
+{
+  "info_name": "张三",
+  "info_header": "前端开发工程师",
+  "introduction": "熟练掌握vue.js框架,经历多个实战开发项目,专注于创建高性能、响应式用户体验",
+  "aside_ability1": "HTML5",
+  "aside_ability2": "CSS3",
+  "aside_ability3": "JavaScript",
+  "aside_ability4": "Vue.js",
+  "aside_ability5": "Git",
+  "main_education": "本科 CET4 软件工程专业",
+  "main_school1": "西安交通大学",
+  "main_lesson1": "主修课程：数据结构、Web前端开发技术等",
+  "main_school2": "厦门工学院",
+  "main_lesson2": "主修课程：计算机组成原理、计算机网络、操作系统等",
+  "project_name1": "电商后台管理系统",
+  "project_name2": "购物平台系统",
+  "project_name3": "微信小程序",
+  "project_introduction1": "该项目基于电商业务需求，搭建标准化后台管理系统模版，涵盖权限配置、数据可视化、用户登录SPU和SKU管理等功能",
+  "project_introduction2": "面向新零售的生鲜电商平台，支持商品列表展示、分类检索以及自定义表单校验等核心功能",
+  "project_introduction3": "正在开发",
+  "telephone": "176********",
+  "email": "913834705@qq.com"
+}
