@@ -115,8 +115,42 @@ const ProjectFilter = (() => {
     };
 })();
 
+ const btn = document.getElementById('btn');
+    
+
+
+    // 等待SDK初始化完成
+    document.addEventListener('UniAppJSBridgeReady', function() {
+      console.log('UniApp JSBridge 已就绪');
+      
+      // 1. 监听小程序发来的消息
+      uni.webView.onMessage(function(data) {
+        console.log('收到小程序消息：', data);
+        alert(`小程序消息：${data.content}`);
+      });
+    });
+
+    // 2. H5主动向小程序发送消息
+    btn.onclick = function sendToMiniProgram() {
+        console.log('通过onclick绑定的点击事件');
+      uni.webView.postMessage({
+        data: {
+          type: 'fromH5',
+          content: '我是H5发来的消息',
+          page: location.href
+        }
+      });
+    }
+
+
+
+
+
+        
 // 初始化项目过滤器
 document.addEventListener('DOMContentLoaded', () => {
+    console.log(12);
+    
     ProjectFilter.init();
 });
 // 下拉菜单功能
